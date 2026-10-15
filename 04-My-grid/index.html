@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-IE">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Week 03 - my flexbox example (pulled from Amazons website)
+    </title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/app.css" />
+  </head>
+  <!-- Grid layout of Amazons home page -->
+  <body class="bg-background text-main-font">
+
+     <!-- keeps all items in center of screen -->
+    <div class="mx-auto max-w-6xl px-6 py-8">
+
+      <div class="grid grid-cols-2 gap-4 gap-y-8 md:grid-cols-4">
+        <!-- small top icons -->
+        <div class="rounded-lg border p-4 bg-background-card">
+          <img src="images/profilepic.jpg" alt=""
+          class="w-full">
+          <h3 class="mt-2 font-bold">Headphone cat</h3>
+            <p>€49.99</p>
+        </div>
+
+        <div class="rounded-lg border p-4 bg-background-card">
+          <img src="images/profilepic.jpg" alt=""
+          class="w-full">
+          <h3 class="mt-2 font-bold">Headphone cat</h3>
+            <p>€49.99</p>
+        </div>
+
+        <div class="rounded-lg border p-4 bg-background-card">
+          <img src="images/profilepic.jpg" alt=""
+          class="w-full">
+          <h3 class="mt-2 font-bold">Headphone cat</h3>
+            <p>€49.99</p>
+        </div>
+
+        <div class="rounded-lg border p-4 bg-background-card">
+          <img src="images/profilepic.jpg" alt=""
+          class="w-full">
+          <h3 class="mt-2 font-bold">Headphone cat</h3>
+            <p>€49.99</p>
+        </div>
+
+         <!-- 2 col span items  -->
+      <div class="col-span-2 rounded-lg border p-4 bg-background-card">
+          <div class="overflow-hidden rounded-md">
+              <img src="images/profilepic.jpg"
+                  alt="Featured headphone cat"
+                  class="h-32 w-full scale-125 object-cover">
+          </div>
+
+          <h2 class="mt-3 font-bold">Featured Product</h2>
+          <p>Buy the headphone cat</p>
+      </div>
+
+      <div class="col-span-2 rounded-lg border p-4 bg-background-card">
+          <div class="overflow-hidden rounded-md">
+              <img src="images/profilepic.jpg"
+                  alt="Featured headphone cat"
+                  class="h-32 w-full scale-125 object-cover">
+          </div>
+
+          <h2 class="mt-3 font-bold">Featured Product</h2>
+          <p>Buy the headphone cat</p>
+      </div>
+
+        <!-- 4 card box container -->
+    <div class="col-span-2 rounded-lg border p-4 bg-background-card">
+
+        <h2 class="mb-4 text-lg font-bold">
+            More items to explore
+        </h2>
+
+        <div class="grid grid-cols-2 gap-4 ">
+
+          <!-- small 4 grid box -->
+            <div class="rounded-lg border p-2 ">
+                <img src="images/profilepic.jpg"
+                    alt="Headphone cat"
+                    class="h-24 w-full object-cover">
+                <h3 class="mt-2 font-semibold">Cat</h3>
+                <p>€19.99</p>
+            </div>
+
+            <div class="rounded-lg border p-2">
+                <img src="images/profilepic.jpg"
+                    alt="Headphone cat"
+                    class="h-24 w-full object-cover">
+                <h3 class="mt-2 font-semibold">Cat</h3>
+                <p>€24.99</p>
+            </div>
+
+      
+            <div class="rounded-lg border p-2">
+                <img src="images/profilepic.jpg"
+                    alt="Headphone cat"
+                    class="h-24 w-full object-cover">
+                <h3 class="mt-2 font-semibold">Cat</h3>
+                <p>€14.99</p>
+            </div>
+
+            <div class="rounded-lg border p-2">
+                <img src="images/profilepic.jpg"
+                    alt="Headphone cat"
+                    class="h-24 w-full object-cover">
+                <h3 class="mt-2 font-semibold">Cat</h3>
+                <p>€29.99</p>
+            </div>
+
+        </div>
+    </div>
+      <!-- box of 4 card grid 2 -->
+    <div class="col-span-2 rounded-lg border p-4 bg-background-card">
+        <h2 class="mb-4 text-lg font-bold">Recommended for You</h2>
+
+        <div class="grid grid-cols-2 gap-4 ">
+            <div class="rounded-lg border p-2 ">
+                <img src="images/profilepic.jpg" alt="Cat"
+                    class="h-24 w-full object-cover">
+                <h3 class="mt-2 font-semibold">Cat</h3>
+                <p>€34.99</p>
+            </div>
+
+            <div class="rounded-lg border p-2">
+                <img src="images/profilepic.jpg" alt="Cat"
+                    class="h-24 w-full object-cover">
+                <h3 class="mt-2 font-semibold">Cat</h3>
+                <p>€39.99</p>
+            </div>
+
+            <div class="rounded-lg border p-2">
+                <img src="images/profilepic.jpg" alt="Cat"
+                    class="h-24 w-full object-cover">
+                <h3 class="mt-2 font-semibold">Cat</h3>
+                <p>€12.99</p>
+            </div>
+
+            <div class="rounded-lg border p-2">
+                <img src="images/profilepic.jpg" alt="Cat"
+                    class="h-24 w-full object-cover">
+                <h3 class="mt-2 font-semibold">Cat</h3>
+                <p>€17.99</p>
+            </div>
+        </div>
+    </div>
+    
+  </div>
+
+  </div>
+  </body>
+
+  </html>
