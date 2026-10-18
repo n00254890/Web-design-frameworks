@@ -4,8 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How It Works</title>
+    <link href="assets/app.css" rel="stylesheet">
 </head>
-<body>
-    <h1>How It Works</h1>
+<body class="min-h-screen flex flex-col bg-white text-gray-500">
+
+    <header class="border-b border-gray-200 p-4 sm:px-8">
+        <div class="mx-auto flex max-w-5xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+            <a href="index.html" class="text-xl font-bold focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">
+                My App
+            </a>
+        <nav aria-label="Main navigation" class="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-5">
+
+            <a href="index.html" class="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600 hover:text-gray-900">
+                Home
+            </a>
+
+            <a href="how-it-works.html" aria-current="page" class="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600 hover:text-gray-900">
+                How it works
+            </a>
+
+            <a href="process.html" class="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600 hover:text-gray-900">
+                Process
+            </a>
+        </nav>
+
+        </div>
+    </header>
+
+    <main class="mx-auto w-full max-w-5xl flex-1 p-4 sm:px-8">
+        <h1 class="text-3xl font-bold">How it works</h1>
+    </main>
+    
+    <footer></footer>
 </body>
+
 </html>
