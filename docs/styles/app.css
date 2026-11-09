@@ -1,4 +1,31 @@
 @import "tailwindcss";
 
-/* Your site's design tokens go in an @theme block here, from your own Figma
-   variables. That is week 7. Until then this file only imports Tailwind. */
+@theme {
+    /* COLOURS */
+    --color-primary: #007EAC;
+    --color-accent: #FFB445;
+    --color-text-light: #2E2D2C;
+    --color-text-dark: #F5F3F1;
+
+    /* TYPOGRAPHY */
+    --font-display: "Atkinson Hyperlegible Next", sans-serif;
+
+    --text-h1: 3.16rem;
+    --text-h2: 2.37rem;
+    --text-h3: 1.78rem;
+    --text-h4: 1.33rem;
+    --text-p1: 1.25rem;
+    --text-p2: 1.125rem;
+
+    /* SPACING */
+    --spacing-space-1: 4px;
+    --spacing-space-2: 8px;
+    --spacing-space-3: 12px;
+    --spacing-space-4: 18px;
+    --spacing-space-5: 24px;
+    --spacing-space-6: 32px;
+    --spacing-space-7: 42px;
+    --spacing-space-8: 56px;
+    --spacing-space-9: 72px;
+    --spacing-space-10: 80px;
+}
