@@ -1,12 +1,24 @@
 @import "tailwindcss";
+@source "../docs";
 
 @theme {
     /* COLOURS */
-    --color-primary: #007EAC;
-    --color-accent: #FFB445;
-    --color-text-light: #2E2D2C;
-    --color-text-dark: #F5F3F1;
+    --color-primary-lightest: #CCE5EE;
+    --color-primary-light: #99CBDE;
+    --color-primary-medium: #007EAC;
+    --color-primary-dark: #004C67;
+    --color-primary-darkest: #001922;
 
+    --color-accent-lightest: #FFF0DA;
+    --color-accent-light: #FFD28F;
+    --color-accent-medium: #FFB445;
+    --color-accent-dark: #66481C;
+    --color-accent-darkest: #33240E;
+
+    --color-text-light: #2E2D2C;
+    --color-text-medium: #E5E1DD;
+    --color-text-dark: #F5F3F1;
+    
     /* TYPOGRAPHY */
     --font-display: "Atkinson Hyperlegible Next", sans-serif;
 
