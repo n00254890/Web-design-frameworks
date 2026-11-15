@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* Trimmed from reference/styles/app.css: the tokens these pages use, the same
+   ones you wrote in week 7. */
+@theme {
+  /* fonts: --font-* makes the font-display and font-sans utilities */
+  --font-display: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans:
+    "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* colours: --color-* makes bg-*, text-*, border-* and the rest */
+  --color-paper: #f0eee3;
+  --color-ink: #16220e;
+  --color-ink-deep: #0a2107;
+  --color-green: #54d98c;
+  --color-lime: #d8f16b;
+  --color-pink: #f7c2dd;
+  --color-link: #0b5c2a;
+  --color-on-light: #16220e;
+  --color-on-dark: #f0eee3;
+
+  /* text sizes: --text-* makes the text-display and text-h2 utilities */
+  --text-display: clamp(2.5rem, 1.6rem + 4vw, 5rem);
+  --text-h2: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+}
+
+/* A plain variable, not a token: no utility is wanted, so it sits outside
+   @theme. The page reads it with border-(length:--rule). */
+:root {
+  --rule: 1.5px;
+}
+
+/* Compass's own rule for people who ask their device for less movement:
+   nothing fades or slides. It is copied here unchanged, and week 11 explains it. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block cursor-pointer border-(length:--rule) border-ink bg-lime px-6 py-2.5 font-display font-extrabold text-on-light no-underline transition-colors duration-120 hover:border-link hover:bg-ink-deep hover:text-on-dark focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-link active:bg-ink motion-reduce:transition-none;
+  }
+  .card-grid {
+    @apply  grid list-none grid-cols-[repeat(auto-fill,minmax(15rem,1fr))] gap-6 border-t-(length:--rule) border-l-(length:--rule) border-ink p-0;
+  }
+  .card {
+    @apply flex flex-1 flex-col gap-2.5 border-t-4 border-r-(length:--rule) border-b-(length:--rule) border-ink bg-paper p-6 transition-colors duration-120 focus-within:border-link hover:border-link;
+  }
+  .card > h2 {
+      @apply m-0 font-display text-h2 leading-[0.98] font-extrabold tracking-[-0.02em] text-balance;
+  }
+  .card__avatar {
+      @apply mb-1 h-24 w-24 overflow-hidden rounded-full border-(length:--rule) border-ink;
+  }
+
+  .card__avatar img {
+      @apply h-full w-full object-cover;
+  }
+
+  .person-meta{
+      @apply inline-block rounded-full px-3 py-1 font-display text-base font-bold text-on-light;
+  }
+
+  .card__quote-mark{
+      @apply mb-0.5 block font-display text-3xl leading-none font-black text-link;
+  }
+
+  .card__cta{
+      @apply inline-block font-bold text-link decoration-[0.1em] underline-offset-[0.2em] transition-[text-decoration-thickness] duration-120 group-focus-within:decoration-[0.18em] group-hover:decoration-[0.18em] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-link;
+  }
+
+} 
