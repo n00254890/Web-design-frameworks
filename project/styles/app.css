@@ -12,6 +12,7 @@
     --color-accent-lightest: #FFF0DA;
     --color-accent-light: #FFD28F;
     --color-accent-medium: #FFB445;
+    --color-accent-600:#CC9037;
     --color-accent-dark: #66481C;
     --color-accent-darkest: #33240E;
 
@@ -30,14 +31,84 @@
     --text-p2: 1.125rem;
 
     /* SPACING */
-    --spacing-space-1: 4px;
-    --spacing-space-2: 8px;
-    --spacing-space-3: 12px;
+    --spacing-space-1: 8px;
+    --spacing-space-2: 12px;
+    --spacing-space-3: 14px;
     --spacing-space-4: 18px;
     --spacing-space-5: 24px;
     --spacing-space-6: 32px;
     --spacing-space-7: 42px;
-    --spacing-space-8: 56px;
-    --spacing-space-9: 72px;
-    --spacing-space-10: 80px;
+    --spacing-space-8: 70px;
+    --spacing-space-9: 80px;
+    --spacing-space-10: 100px;
+
+    --spacing-button: 10px;
+    --radius-button: 15px;
+    --container-site: 1200px;
+    --spacing-page: 20px;
+}
+/* Utility classes */
+
+@layer components {
+    
+        .btn {
+            @apply rounded-button bg-accent-medium px-button py-button text-h4
+                    shadow-none
+                    transition-all duration-300
+                    hover:bg-accent-light
+                    hover:shadow-md
+                    active:bg-accent-600
+                    active:shadow-xl
+                    focus-visible:outline-2
+                    focus-visible:outline-offset-4
+                    focus-visible:outline-primary-dark
+                    active:translate-y-0.5;
+
+
+        }
+        .site-header {
+            @apply w-full bg-primary-darkest;
+        }
+        .navbar {
+            @apply mx-auto flex max-w-site items-center
+                justify-between px-page py-space-2;
+        }
+
+        .nav-logo{
+            @apply font-display text-h1 font-black text-accent-lightest no-underline;
+        }
+        .nav-links {
+            @apply flex items-center gap-space-8;
+        }
+        .nav-link {
+        @apply font-display text-h3 font-bold
+                text-accent-medium no-underline
+                transition-colors duration-200
+                hover:text-accent-lightest
+                 active:text-accent-dark
+                focus-visible:outline-2
+                focus-visible:outline-offset-4
+                focus-visible:outline-accent-medium;
+    }
+}
+
+
+
+/* mobile layout */
+@media (max-width: 639px) {
+     .navbar {
+        @apply flex-col items-start gap-space-4;
+    }
+
+    .nav-logo {
+        @apply text-h2;
+    }
+
+    .nav-links {
+        @apply w-full flex-col items-start gap-space-3;
+    }
+
+    .nav-link {
+        @apply text-h4 py-space-1;
+    }
 }
