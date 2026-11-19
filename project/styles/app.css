@@ -3,22 +3,22 @@
 
 @theme {
     /* COLOURS */
-    --color-primary-lightest: #CCE5EE;
     --color-primary-light: #99CBDE;
     --color-primary-medium: #007EAC;
     --color-primary-dark: #004C67;
     --color-primary-darkest: #001922;
+    --color-primary-teal: #174B55;
 
-    --color-accent-lightest: #FFF0DA;
-    --color-accent-light: #FFD28F;
-    --color-accent-medium: #FFB445;
-    --color-accent-600:#CC9037;
-    --color-accent-dark: #66481C;
-    --color-accent-darkest: #33240E;
-
-    --color-text-light: #2E2D2C;
     --color-text-medium: #E5E1DD;
-    --color-text-dark: #F5F3F1;
+    --color-background-light: #FFF0DA;
+    --color-text-dark: #1C1305;
+    --color-text-light: #FEF8F0;
+    --color-background-white: #ffff; 
+
+    --color-accent-yellow: #F9C066;
+    --color-accent-orange: #FA9A0B;
+    --color-accent-deeporange: #EB7208;
+
     
     /* TYPOGRAPHY */
     --font-display: "Atkinson Hyperlegible Next", sans-serif;
@@ -32,15 +32,19 @@
 
     /* SPACING */
     --spacing-space-1: 8px;
-    --spacing-space-2: 12px;
-    --spacing-space-3: 14px;
-    --spacing-space-4: 18px;
-    --spacing-space-5: 24px;
-    --spacing-space-6: 32px;
-    --spacing-space-7: 42px;
-    --spacing-space-8: 70px;
-    --spacing-space-9: 80px;
-    --spacing-space-10: 100px;
+    --spacing-space-2: 10px;
+    --spacing-space-3: 12px;
+    --spacing-space-4: 16px;
+    --spacing-space-6: 24px;
+    --spacing-space-8: 32px;
+    --spacing-space-10: 40px;
+    --spacing-space-12: 48px;
+    --spacing-space-16: 64px;
+    --spacing-space-20: 80px;
+    --spacing-space-24: 96px;
+    --spacing-space-32: 128px;
+    --spacing-space-40: 160px;
+
 
     --spacing-button: 10px;
     --radius-button: 15px;
@@ -52,12 +56,12 @@
 @layer components {
     
         .btn {
-            @apply rounded-button bg-accent-medium px-button py-button text-h4
+            @apply rounded-button bg-accent-yellow px-button py-button text-h4
                     shadow-none
                     transition-all duration-300
-                    hover:bg-accent-light
+                    hover:bg-accent-orange
                     hover:shadow-md
-                    active:bg-accent-600
+                    active:bg-accent-deeporange
                     active:shadow-xl
                     focus-visible:outline-2
                     focus-visible:outline-offset-4
@@ -67,7 +71,7 @@
 
         }
         .site-header {
-            @apply w-full bg-primary-darkest;
+            @apply w-full bg-primary-teal;
         }
         .navbar {
             @apply mx-auto flex max-w-site items-center
@@ -75,20 +79,20 @@
         }
 
         .nav-logo{
-            @apply font-display text-h1 font-black text-accent-lightest no-underline;
+            @apply font-display text-h1 font-black text-text-light no-underline;
         }
         .nav-links {
             @apply flex items-center gap-space-8;
         }
         .nav-link {
         @apply font-display text-h3 font-bold
-                text-accent-medium no-underline
+                text-accent-yellow no-underline
                 transition-colors duration-200
-                hover:text-accent-lightest
-                 active:text-accent-dark
+                hover:text-accent-orange
+                 active:text-accent-deeporange
                 focus-visible:outline-2
                 focus-visible:outline-offset-4
-                focus-visible:outline-accent-medium;
+                focus-visible:outline-accent-orange;
     }
 }
 

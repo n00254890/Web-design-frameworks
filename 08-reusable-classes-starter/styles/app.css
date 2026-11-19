@@ -75,3 +75,13 @@
   }
 
 } 
+
+@utility border-rule {
+    border-width: var(--rule);
+    border-color: var(--color-ink);
+}
+
+@utility border-rule-* {
+    border-width: calc(var(--rule) * --value(integer));
+    border-color: var(--color-ink);
+}
