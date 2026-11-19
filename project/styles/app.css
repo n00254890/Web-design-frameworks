@@ -46,73 +46,156 @@
     --spacing-space-40: 160px;
 
 
-    --spacing-button: 10px;
     --radius-button: 15px;
     --container-site: 1200px;
     --spacing-page: 20px;
+    --radius-hero: 64px;
 }
 /* Utility classes */
 
+
 @layer components {
-    
-        .btn {
-            @apply rounded-button bg-accent-yellow px-button py-button text-h4
-                    shadow-none
-                    transition-all duration-300
-                    hover:bg-accent-orange
-                    hover:shadow-md
-                    active:bg-accent-deeporange
-                    active:shadow-xl
-                    focus-visible:outline-2
-                    focus-visible:outline-offset-4
-                    focus-visible:outline-primary-dark
-                    active:translate-y-0.5;
 
+    /* BUTTON */
 
-        }
-        .site-header {
-            @apply w-full bg-primary-teal;
-        }
-        .navbar {
-            @apply mx-auto flex max-w-site items-center
-                justify-between px-page py-space-2;
-        }
-
-        .nav-logo{
-            @apply font-display text-h1 font-black text-text-light no-underline;
-        }
-        .nav-links {
-            @apply flex items-center gap-space-8;
-        }
-        .nav-link {
-        @apply font-display text-h3 font-bold
-                text-accent-yellow no-underline
-                transition-colors duration-200
-                hover:text-accent-orange
-                 active:text-accent-deeporange
-                focus-visible:outline-2
-                focus-visible:outline-offset-4
-                focus-visible:outline-accent-orange;
+    .btn {
+        @apply rounded-button bg-accent-yellow
+               px-space-6 py-space-3 text-h4
+               shadow-none transition-all duration-300
+               hover:bg-accent-orange hover:shadow-md
+               active:bg-accent-deeporange active:shadow-xl
+               active:translate-y-0.5
+               focus-visible:outline-2
+               focus-visible:outline-offset-4
+               focus-visible:outline-primary-dark;
     }
-}
 
 
+    /* HEADER */
 
-/* mobile layout */
-@media (max-width: 639px) {
-     .navbar {
-        @apply flex-col items-start gap-space-4;
+    .site-header {
+        @apply w-full bg-primary-teal;
+    }
+
+
+    /* NAVBAR - MOBILE DEFAULT */
+
+    .navbar {
+        @apply mx-auto flex max-w-site flex-col
+               items-start gap-space-6
+               px-space-6 py-space-6;
     }
 
     .nav-logo {
-        @apply text-h2;
+        @apply font-display text-h2 font-black
+               text-text-light no-underline;
     }
 
     .nav-links {
-        @apply w-full flex-col items-start gap-space-3;
+        @apply flex w-full flex-wrap items-center
+               gap-x-space-12 gap-y-space-3;
     }
 
     .nav-link {
-        @apply text-h4 py-space-1;
+        @apply font-display text-p1 font-bold
+               text-accent-yellow no-underline
+               transition-colors duration-200
+               hover:text-accent-orange
+               active:text-accent-deeporange
+               focus-visible:outline-2
+               focus-visible:outline-offset-4
+               focus-visible:outline-accent-orange;
     }
+
+
+    /* NAVBAR - DESKTOP */
+
+    @variant md {
+        .navbar {
+            @apply flex-row items-center
+                   justify-between px-space-6;
+        }
+
+        .nav-logo {
+            @apply text-h1;
+        }
+
+        .nav-links {
+            @apply w-auto gap-space-6;
+        }
+
+        .nav-link {
+            @apply text-h3;
+        }
+    }
+
+
+    /* HERO - MOBILE DEFAULT */
+
+    .hero {
+        @apply mx-auto flex max-w-site flex-col;
+    }
+
+    .hero-image {
+        @apply order-1 w-full overflow-hidden;
+    }
+
+    .hero-image img {
+        @apply block aspect-video w-full object-cover;
+    }
+
+    .hero-content {
+        @apply order-2 flex flex-col
+               px-space-6 py-space-10;
+    }
+
+    .hero-content h1 {
+        @apply text-h1 font-bold leading-tight
+               text-center;
+    }
+
+    .hero-content p {
+        @apply mt-space-4 text-p1 text-center;
+    }
+
+    .hero-content .btn {
+        @apply mt-space-6 flex w-full
+               items-center justify-center;
+    }
+
+
+    /* HERO - DESKTOP */
+
+    @variant md {
+        .hero {
+            @apply grid grid-cols-2 items-center
+                   gap-space-10 px-space-8 py-space-12;
+        }
+
+        .hero-image {
+            @apply order-2 rounded-t-hero;
+        }
+
+        .hero-image img {
+            @apply rounded-hero-t-hero;
+        }
+
+        .hero-content {
+            @apply order-1 px-0 py-0;
+        }
+
+        .hero-content h1,
+        .hero-content p {
+            @apply text-left;
+        }
+
+        .hero-content h1 {
+            @apply text-h2;
+        }
+
+        .hero-content p {
+            @apply text-p2;
+        }
+    }
+
 }
