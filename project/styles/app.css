@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @source "../docs";
+@custom-variant dark ([data-theme="dark"] &);
 
 @theme {
     /* COLOURS */
@@ -17,7 +18,7 @@
 
     --color-accent-yellow: #F9C066;
     --color-accent-orange: #FA9A0B;
-    --color-accent-deeporange: #EB7208;
+    --color-accent-deeporange: #F37E30;
 
     
     /* TYPOGRAPHY */
@@ -35,6 +36,7 @@
     --spacing-space-2: 10px;
     --spacing-space-3: 12px;
     --spacing-space-4: 16px;
+    --spacing-space-5: 20px;
     --spacing-space-6: 24px;
     --spacing-space-8: 32px;
     --spacing-space-10: 40px;
@@ -48,12 +50,16 @@
 
     --radius-button: 15px;
     --container-site: 1200px;
-    --spacing-page: 20px;
-    --radius-hero: 64px;
+    --radius-hero: 64px 64px 0 0;
 }
+/* Dark Mode */
+[data-theme="dark"] {
+  --color-primary-dark: #0a2107;
+  --color-ink: #f0eee3;
+  --color-link: var(--color-green);
+}
+
 /* Utility classes */
-
-
 @layer components {
 
     /* BUTTON */
@@ -173,11 +179,11 @@
         }
 
         .hero-image {
-            @apply order-2 rounded-t-hero;
+            @apply order-2 rounded-hero;
         }
 
         .hero-image img {
-            @apply rounded-hero-t-hero;
+            @apply rounded-hero;
         }
 
         .hero-content {
